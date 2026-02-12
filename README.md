@@ -8,11 +8,12 @@ The variant callers used are snippy and bcftools. Unlike Snippy, bcftools requir
 ## Part 1: 
 #### Intakes a reference genome for E.coli genomes and simulates SNP and Indel Mutations at 30x depth for 100bp reads with a ground truth VCF
 
-`code`mkdir <output_dir> 
+`mkdir <output_dir>` 
+`cd <output_dir>`
 Download mutations_depth.py, differences_fasta.py and depth_simulator.sh 
-`code`python mutations_depth.py <input.fasta> <output.fasta> <output.vcf> 
-`code`python differences_fasta.py > <output_file.txt> 
-`code`./depth_simulator.sh <input.fasta> <single/paired end files> (absolute path only)
+`python mutations_depth.py <input.fasta> <output.fasta> <output.vcf>`
+`python differences_fasta.py > <output_file.txt>`
+`./depth_simulator.sh <input.fasta> <single/paired end files> (absolute path only)`
 
 ## Part 2: 
 #### Implements two variant callers and evaluates performance  
@@ -31,7 +32,7 @@ Download mutations_depth.py, differences_fasta.py and depth_simulator.sh
     - bcftools samtools>=1.6 `conda activate varcall` <--- `conda create -n varcall -c conda-forge bcftools samtools=1.6`
     - snippy samtools=1.22 `conda activate snippy` <--- `conda create -n snippy -c conda-forge snippy samtools=1.22`
 - Algorithm issue: Indels in output.vcf not conducive with output.fasta following check with differences_fasta_files.py 
-    - Next steps: experiment with SNPs only, test changing variable names as possible source of error 
+    - Next steps: experiment with SNPs only, test changing variable names as possible source of error
 
 ## Evaluation 
 
