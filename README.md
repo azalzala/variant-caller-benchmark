@@ -20,16 +20,16 @@ Download mutations_depth.py, differences_fasta.py and depth_simulator.sh
 - SRR25083113_1.fastq.gz and SRR25083113_2.fastq.gz
 - Reference EcoliK12-MG1655.fasta
 
-`code` gzip read1 read2
-`code` chmod +x pipeline.sh 
-`code`./pipeline.sh fasta_reference read1 read2
-`code` python evaluateVCF.py -a output.vcf -b bcf -c snippy empty-text-file.txt
+` gzip read1 read2`
+`chmod +x pipeline.sh` 
+`./pipeline.sh fasta_reference read1 read2`
+`python evaluateVCF.py -a output.vcf -b bcf -c snippy empty-text-file.txt`
     
 
 ## Common issues
 - Environment issue: Errors with environment resolved using separate environments for bcftools and snippy. Requires two conda environments with separate versioning due to compatibility issues. 
-    - bcftools samtools=1.22 
-    - snippy samtools>=1.6
+    - bcftools samtools>=1.6 `conda activate varcall` <--- `conda create -n varcall -c conda-forge bcftools samtools=1.6`
+    - snippy samtools=1.22 `conda activate snippy` <--- `conda create -n snippy -c conda-forge snippy samtools=1.22`
 - Algorithm issue: Indels in output.vcf not conducive with output.fasta following check with differences_fasta_files.py 
     - Next steps: experiment with SNPs only, test changing variable names as possible source of error 
 
