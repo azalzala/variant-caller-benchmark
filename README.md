@@ -8,7 +8,7 @@ The variant callers used are snippy and bcftools. Unlike Snippy, bcftools requir
 ## Part 1: 
 #### Intakes a reference genome for E.coli genomes and simulates SNP and Indel Mutations at 30x depth for 100bp reads with a ground truth VCF
 
-`mkdir <output_dir>` 
+`mkdir <output_dir>`
 `cd <output_dir>`
 Download mutations_depth.py, differences_fasta.py and depth_simulator.sh 
 `python mutations_depth.py <input.fasta> <output.fasta> <output.vcf>`
