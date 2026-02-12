@@ -26,7 +26,7 @@ Download mutations_depth.py, differences_fasta.py and depth_simulator.sh
 - SRR25083113_1.fastq.gz and SRR25083113_2.fastq.gz
 - Reference EcoliK12-MG1655.fasta
 
-` gzip read1 read2`
+` gunzip read1 read2`
 
 `chmod +x pipeline.sh` 
 
