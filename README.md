@@ -37,8 +37,8 @@ Download mutations_depth.py, differences_fasta.py and depth_simulator.sh
 
 ## Common issues
 - Environment issue: Errors with environment resolved using separate environments for bcftools and snippy. Requires two conda environments with separate versioning due to compatibility issues. 
-    - bcftools samtools>=1.6 `conda activate varcall` <--- `conda create -n varcall -c conda-forge bcftools samtools=1.6`
-    - snippy samtools=1.22 `conda activate snippy` <--- `conda create -n snippy -c conda-forge snippy samtools=1.22`
+    - bcftools samtools>=1.6 `conda activate varcall` <--- `conda create -n varcall -c conda-forge samtools=1.22 minimap2=2.30 bcftools=1.22 `
+    - snippy samtools=1.22 `conda activate snippy` <--- `conda create -n snippy -c conda-forge snippy samtools=1.6`
 - Algorithm issue: Indels in output.vcf not conducive with output.fasta following check with differences_fasta_files.py 
     - Next steps: experiment with SNPs only, test changing variable names as possible source of error
 
