@@ -32,7 +32,7 @@ Download mutations_depth.py, differences_fasta.py and depth_simulator.sh
 
 `./pipeline.sh fasta_reference read1 read2`
 
-`python evaluateVCF.py -a output.vcf -b bcf -c snippy empty-text-file.txt`
+`python evaluateVCF.py -a output.vcf -b bcf -c snippy > empty-text-file.txt`
     
 
 ## Common issues
