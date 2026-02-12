@@ -23,7 +23,7 @@ samtools depth -a sorted_reads.bam > depth.txt
 
 echo "Quality and depth files ready" 
 
-samtools mpileup -Ou -f $1 sorted_reads.bam | bcftools call -cv -Ov > bcf.vcf
+samtools mpileup -Ou -f $fasta_reference sorted_reads.bam | bcftools call -cv -Ov > bcf.vcf
 
 echo "Variant caller bcftools complete" 
 
