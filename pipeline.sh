@@ -9,6 +9,8 @@ fasta_reference="$1"
 fastq_1="$2"
 fastq_2="$3" 
 
+source "$(conda info --base)/etc/profile.d/conda.sh"
+
 conda activate varcall 
 
 minimap2 -a -x sr $fasta_reference $fastq_1 $fastq_2 | samtools view -h -F 0x900 | samtools sort -O bam > sorted_reads.bam
