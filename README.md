@@ -11,9 +11,13 @@ The variant callers used are snippy and bcftools. Unlike Snippy, bcftools requir
 `mkdir <output_dir>`
 
 `cd <output_dir>`
+
 Download mutations_depth.py, differences_fasta.py and depth_simulator.sh 
+
 `python mutations_depth.py <input.fasta> <output.fasta> <output.vcf>`
+
 `python differences_fasta.py > <output_file.txt>`
+
 `./depth_simulator.sh <input.fasta> <single/paired end files> (absolute path only)`
 
 ## Part 2: 
@@ -23,8 +27,11 @@ Download mutations_depth.py, differences_fasta.py and depth_simulator.sh
 - Reference EcoliK12-MG1655.fasta
 
 ` gzip read1 read2`
+
 `chmod +x pipeline.sh` 
+
 `./pipeline.sh fasta_reference read1 read2`
+
 `python evaluateVCF.py -a output.vcf -b bcf -c snippy empty-text-file.txt`
     
 
